@@ -16,9 +16,10 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   bio: String,
-  profile_image:{
-    type:String,
-    default:"https://www.istockphoto.com/photo/icon-man-on-a-white-background-3d-render-gm512830984-87348115"
+  profile_image: {
+    type: String,
+    default:
+      "https://www.istockphoto.com/photo/icon-man-on-a-white-background-3d-render-gm512830984-87348115",
   },
 });
 
