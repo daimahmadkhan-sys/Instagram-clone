@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   profile_image: {
     type: String,
     default:
-      "https://www.istockphoto.com/photo/icon-man-on-a-white-background-3d-render-gm512830984-87348115",
+      "https://ik.imagekit.io/daimkhan/Insta-clone/profile/default%20profile.webp",
   },
 });
 
