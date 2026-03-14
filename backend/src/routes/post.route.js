@@ -1,10 +1,12 @@
 const express = require("express");
-const postController = require("../controllers/post.controller");
-const identifyUser = require("../middlewares/auth.middleware");
 const multer = require("multer");
 const upload = multer({ storage: multer.memoryStorage() });
 
 const postRouter = express.Router();
+
+const postController = require("../controllers/post.controller");
+const identifyUser = require("../middlewares/auth.middleware");
+
 
 postRouter.post(
   "/",
@@ -18,5 +20,7 @@ postRouter.get(
   identifyUser,
   postController.getPostDetailController,
 );
+
+postRouter.post("/like/:postId",identifyUser,postController.likePostController)
 
 module.exports = postRouter;
